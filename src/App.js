@@ -17,7 +17,7 @@ function App() {
     };
     //let newTask = [taskToDo, ...tasks];
     //setTasks(newTask);
-    if (toDo != '') {
+    if (toDo !== '') {
       setTasks(prev => [taskToDo, ...prev])};
     setToDo('');
   }
@@ -39,9 +39,11 @@ function App() {
   )
   return (
     <div className="App">
-      <Header />
-      <InputToDo addTask={addTask} toDo = {toDo} setToDo = {setToDo}/>
-      {taskToDoList}
+      <div className='App-inner'>
+        <Header />
+        <InputToDo addTask={addTask} toDo = {toDo} setToDo = {setToDo}/>
+        {taskToDoList}
+      </div>
     </div>
   );
 }
